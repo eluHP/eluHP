@@ -1,0 +1,29 @@
+ICU (Interrupt Control Unit):
+IR (Interrupt Request Register)
+0 nếu không có yêu cầu ngắt nào
+1 nếu có yêu cầu ngắt
+không thể tự về 0 nếu vẫn còn yêu cầu ngắt 
+IER (Interrput Request Enable Register):
+1 để gửi yêu cầu ngắt đến CPU hoặc DMACA/DTC
+(không ảnh hưởng đến IR)
+IPR:
+Thanh ghi xác định mức ưu tiên ngắt (so sánh với PSW)
+FIR:
+Thanh ghi ngắt nhanh, bỏ qua mức ưu tiên ngắt của IPR nhưng cần phải thay đổi thanh ghi IER = 0
+SWINTR:
+Thanh ghi kích hoạt ngắt phần mềm, khi muốn debug ngắt bằng phần mềm thì kích hoạt
+IRQCR:
+thanh ghi điều khiển ngắt ngoài dùng để thiết lập ngắt ngoài các chân IRQ
+xác định điều kiện ngắt ngoài bằng các bit trong thanh ghi
+NMISR:
+Thanh ghi trạng thái ngắt không thể che, dùng để xác định các sự kiện quan trọng như ngắt từ châm NMI, ngắt giám sát điện áp, ngắt do dừng dao động
+Cơ bản thanh ghi này xác định các sự kiện ngắt gây hại đến vi điều khiển
+NMIER:
+là thanh ghi có thể Write trạng thái NMI, giám sát điện áp, dừng giao động
+NMICLR:
+xóa cờ ngắt của giám sát điện áp và dừng giao động
+NMICR:
+setup điều kiện nhận ngắt NMI (rising or falling)
+
+Về cơ bản ở mục ICU gồm các chức năng chính như giám sát hoặc debug các ngắt không rõ nguyên nhân, hoặc có nguyên nhân từ các thanh ghi
+
