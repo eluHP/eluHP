@@ -1,0 +1,17 @@
+Multiple Timer Unit (MTU2)
+Gồm 2 đơn vị là MTU unit 0 và MTU unit 1
+MTU unit 0 gồm: MTU0, MTU1, MTU2, MTU3, MTU4, MTU5
+MTU unit 1 gồm MTU 6,... 11
+Chức năng chính:
+PWM, đếm xung đầu vào và đo thời gian, tạo xung vuông - tam giác
+16 I/O, 3 Input
+TCR: Timer Control Register
+Tốc độ đếm, cạnh đếm, điều kiện xóa bộ đếm
+Để đồng bộ xóa, cần thiết lập TSYR.SYNC = 1
+TMDR: Timer Mode Register
+quyết định hoạt động của bộ đếm, cho phép chọn chết độ hoạt động của bộ đếm
+TIER: Timer Interrupt Enable Register thanh ghi quan trọng trong việc điều khiển ngắt của MTU (điều kiện ngắt)
+TSR: Timer Status Register xem là TCNT đang đến lên hay đếm xuống
+TBTM: xác định thời điểm chuyển dữ liệu từ 2 thanh ghi phối hợp với nhau
+
+
